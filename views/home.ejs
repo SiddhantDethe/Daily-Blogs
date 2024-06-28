@@ -1,0 +1,38 @@
+<%- include("partials/header.ejs") %>
+<h1>Siddhant Dethe</h1>
+<h3>
+   <i> Web-Developer</i>
+</h3>
+<p><%= homeContent %> </p>
+
+<div class="Blog-content"> <h3> <b>Why I Love Building Stuff</b> </h3>
+
+    <p>
+        Let's be honest, staring at a screen all day isn't everyone's cup of tea. But for me, the world of web development is a playground of possibilities.  I get a thrill out of crafting websites that are not just visually appealing, but also intuitive and downright fun to use.  Think of it like building a digital jungle gym – gotta make sure it's engaging and keeps people coming back for more.
+        <br>
+    But my fascination doesn't stop at the pixelated world. My other half, the electronics engineering geek in me, craves to understand the physical components that make the web tick.  It's like knowing a magic trick – sure, it's impressive, but understanding the mechanics behind it elevates the whole experience.  This unique blend of skills allows me to see projects from a different angle. It's not just about lines of code; it's about the intricate dance between software and hardware that brings a website to life.
+    <br>
+    Now, some might think juggling both these worlds sounds like a recipe for chaos. But here's the secret weapon: I'm a master organizer (think color-coded to-do lists and strategically placed sticky notes!). This allows me to multitask like a champ, keeping multiple projects on track without losing my cool.  Deadlines? No problem. Feature creep? We can tackle that too.
+    <br>
+    Here's the real kicker though: the learning never stops.  Technology is a living, breathing beast constantly evolving, and I wouldn't have it any other way. I'm a firm believer that self-improvement is the key to staying relevant and, more importantly, staying excited.  New coding languages? Sign me up! Cutting-edge frameworks? Let's dive in!  This constant learning keeps my mind sharp and allows me to bring fresh ideas and perspectives to the table.  Plus, it makes me a better teammate – always up-to-date and ready to collaborate on brainstorming sessions that push the boundaries of what's possible.
+    <br>
+    But my passion goes beyond the technical.  What truly drives me is the "why" behind the "how."  I'm fascinated by the way technology can be used to make a real difference in the world.  Whether it's building a user-friendly platform that simplifies people's lives or creating an interactive web experience that connects communities, the potential for positive change is what gets me out of bed in the morning.
+    <br>
+    So, there you have it.  I'm not just a programmer or an engineer; I'm a builder, a problem-solver, and a lifelong learner.  And with my unique skillset, organizational wizardry, and dedication to continuous learning, I'm ready to tackle any challenge that comes my way.  Let's get building!
+    </p>
+</div>
+     
+    
+<% posts.forEach((post) => { %>
+    <div class="postStyle">
+    <h2><%= post.title %></h2>
+    <p>
+        <%=post.content.substring(0, 100) + "..."%>
+        <a href="/posts/<%= post.title %>">Read More</a>
+    </p>
+    </div>
+<% }); %>
+
+
+<%- include("partials/footer.ejs") %>
+
